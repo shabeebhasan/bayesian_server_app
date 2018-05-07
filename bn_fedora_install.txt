@@ -1,0 +1,10 @@
+sudo dnf install -y python3-virtualenv python3-scipy python3-numpy python3-networkx python3-Cython
+sudo pip3 install --no-cache-dir pomegranate
+python3 -c 'from pomegranate import *; print(NormalDistribution(0, 1).probability(0))'
+0.398942280402
+
+sudo pip3 install Django
+
+./ngrok http 8000 &
+curl http://127.0.0.1:4040/api/tunnels 
+python3 manage.py runserver
